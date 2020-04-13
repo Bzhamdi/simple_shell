@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * exec_cmd - execute command
+ * exec_cmd - execute command.
  * @cmd:arguments (command).
  *
  */
