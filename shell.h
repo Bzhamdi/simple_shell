@@ -1,5 +1,5 @@
-#ifndef SHELL_H
-#define SHELL_H
+#ifndef shell_h
+#define shell_h
 #include <stddef.h>
 #include <sys/stat.h>
 #include <signal.h>
@@ -11,22 +11,20 @@
 #include <sys/types.h>
 #include <errno.h>
 extern char **environ;
-
 /**
- * struct list_of_path - path directories
- * @str: string - (malloc'ed path)
- * @next: points to the next node
+ * struct list_of_path - list of path
+ * @str: string
+ * @next: points
  */
 typedef struct list_of_path
 {
 	char *str;
 	struct list_of_path *next;
 } list_t;
-
 /**
- * struct built - cmd commandes..
- * @str:char types.
- * @fn: function.
+ * struct built - cmd commandes
+ * @str: char types
+ * @fn: function
  *
  */
 typedef struct built
@@ -34,10 +32,8 @@ typedef struct built
 	char *str;
 	void (*fn)(char **);
 } built_t;
-
 char *concat_3_strings(char *str1, char *str2, char *str3);
 void _puts(char *str);
-
 void free_list(list_t *head);
 void sig_handler(int sig);
 int _atoi(char *s);
@@ -56,8 +52,7 @@ int _strlen(char *s);
 void my_exit(char **argv);
 void free_argv(char **argv);
 void _EndOfLine(int line, char *buffer);
-void free_env();
-
+void free_env(void);
 void cd(char **args __attribute__((unused)));
 int _strcmpr(char *cmp1, char *cmp2);
 char *_strtok(char *str, const char *delim);
