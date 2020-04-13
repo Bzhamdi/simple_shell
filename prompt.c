@@ -21,5 +21,4 @@ void sig_handler(int sig)
 {
 	if (sig == SIGINT)
 		_puts("\n#BZ$ ");
-        
 }
