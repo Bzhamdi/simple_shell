@@ -1,6 +1,4 @@
-
 #include "shell.h"
-
 /**
  * tokenize - splits a string into an array of pointers.
  * @cmd: the commande to be split.
@@ -8,10 +6,9 @@
  * Return: array of pointers of words.
  *
  */
-
 char **tokenize(char *cmd, const char *delim)
 {
-      	char *token;
+	char *token;
 	char **array;
 	int i = 0;
 
