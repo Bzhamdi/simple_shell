@@ -32,7 +32,7 @@ char *_getenv(const char *name)
 
 /**
  * env - prints the current environment
- *
+ * @arv: char
  */
 void env(char **arv __attribute__ ((unused)))
 {
