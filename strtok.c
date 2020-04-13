@@ -7,35 +7,37 @@
  *
  * Return: 1 match or 0 not.
  */
- int _strchr(char c, const char *delim)
+int _strchr(char c, const char *delim)
 {
-	 int i = 0;
+	int i = 0;
 
 	while (delim[i])
 	{
 		if (c == delim[i])
 			return (1);
-i++;
-}
+		i++;
+	}
 	return (0);
 }
 /**
- *_check _strchr - check for strchr.
+ *_check_strchr - check for strchr.
  * @str:string.
  * @delim: delimiter.
+ * @a: int
  * Return: lenth of string.
-*/
+ */
 
 int _check_strchr(char *str, const char *delim, int a)
 {
-         int i = 0;
-        while (str[i] != '\0')
-        {
-                if (_strchr(str[i], delim) == a)
-                        break;
-        i++;
-        }
-        return (i);
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		if (_strchr(str[i], delim) == a)
+			break;
+		i++;
+	}
+	return (i);
 }
 
 /**
@@ -72,8 +74,6 @@ char *_strtok(char *str, const char *delim)
 	{
 		tok2[b] = '\0';
 		tok2 = tok2 + b + 1;
-	/*	if (*next_token == '\0')
-			next_token = NULL;*/
 	}
 	return (tok1);
 }
