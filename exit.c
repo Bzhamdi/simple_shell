@@ -2,7 +2,7 @@
 
 /**
  * my_exit - exits the shell with (program).
- * @argv: arguments.
+ * @argv: arguments
  *
  */
 void my_exit(char **argv)
