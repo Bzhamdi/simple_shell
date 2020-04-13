@@ -13,6 +13,7 @@ void(*verif_built(char **argv))(char **argv)
 		{"exit", my_exit},
 		{"env", env},
 		{"cd", cd},
+		{"help", _help},
 		{NULL, NULL}
 	};
 

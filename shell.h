@@ -57,4 +57,5 @@ void cd(char **args __attribute__((unused)));
 int _strcmpr(char *cmp1, char *cmp2);
 char *_strtok(char *str, const char *delim);
 int _putchar(char c);
+void _help(char **argv);
 #endif
