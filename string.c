@@ -54,6 +54,12 @@ void _puts(char *str)
 	}
 
 }
+/**
+*_strcmpr - compaire 2 string.
+*@cmp1: str
+*@cmp2: str
+*Return: int
+*/
 int _strcmpr(char *cmp1, char *cmp2)
 {
 	int i = 0;
