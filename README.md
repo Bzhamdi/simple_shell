@@ -70,39 +70,73 @@ vagrant@vagrant-ubuntu-trusty-64:~/simple_shell$
 ### Files
 - ***AUTHORS***
 - ***man_1_simple_shell***
-Man page
+
+- Man page
+
 - **shell.h**
-Header file
+
+- Header file
+
 - **shell.c**
-main function
+
+- main function
+
 - **string.c**
-String manipulation
+
+- String manipulation
+
 - ***_putchar.c***
-New putchar
+
+- New putchar
+
 - ***atoi.c***
-New atoi
+
+- New atoi
+
 - ***builtin.c***
-builtin commands
+
+- builtin commands
+
 - ***concat_all.c***
-Concat three strings
+
+- Concat three strings
+
 - ***end_of_file.c***
-handles the End Of File condition
+
+- handles the End Of File condition
+
 - ***environment.c***
-Environment
-***execute.c***
-Execute functions
+
+- Environment
+
+- ***execute.c***
+
+- Execute functions
+
 - ***exit.c***
-Exit functions
+
+- Exit functions
+
 - ***free.c***
-Free functions
+
+- Free functions
+
 - ***path.c***
-Get the path
+
+- Get the path
+
 - ***prompt.c***
-Print the promt
+
+- Print the promt
+
 - ***strtok.c***
-New strtok
+
+- New strtok
+
 - ***tokenization.c***
-Tokeniz function
+
+- Tokenization function
+
 ****
 
 ### Bugs
