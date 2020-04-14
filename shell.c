@@ -1,47 +1,48 @@
 #include "shell.h"
 /**
  * main - Shell
+ *@argc: argc
+ *@argv: argv
  * Return: 0 on success
  */
-int main(void)
+int main(int argc __attribute__((unused)), char **argv)
 {
 	unsigned int is_pipe = 0;
 	ssize_t len = 0;
-	char *buffer = NULL;
-	char **argv;
+	char **arg, *value, *the_path, *buffer = NULL;
 	size_t size = 0;
-	char *value, *the_path;
 	list_t *head = '\0';
 	void (*f)(char **);
+	int l = 0;
 
 	while (1)
 	{
 		print_prompt(is_pipe);
 		signal(SIGINT, sig_handler);
 		len = getline(&buffer, &size, stdin);
+		if (len)
+		l++;
 		_EndOfLine(len, buffer);
-		argv = tokenize(buffer, " \n");
+		arg = tokenize(buffer, " \n");
 		value = _getenv("PATH");
 		head = create_pathlist(value);
-		the_path = _which(argv[0], head);
-		f = verif_built(argv);
+		the_path = _which(arg[0], head);
+		f = verif_built(arg);
 		if (f)
-		{
 			;
-		}
 		else if (!the_path)
-		{
-			exec_cmd(argv);
-		}
+			exec_cmd(arg, argv, l, the_path);
 		else if (the_path)
 		{
-			free(argv[0]);
-			argv[0] = the_path;
-			exec_cmd(argv);
+			free(arg[0]);
+			arg[0] = the_path;
+			exec_cmd(arg, argv, l, the_path);
 		}
 	}
 	free_list(head);
 	free(buffer);
-	free_argv(argv);
+	free_argv(arg);
+	free(argv);
 	return (0);
 }
+

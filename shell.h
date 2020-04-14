@@ -47,7 +47,7 @@ void work(char **argv, char *buffer);
 char *_strdup(char *str);
 void print_prompt(int test);
 char **tokenize(char *cmd, const char *delim);
-void exec_cmd(char **cmd);
+void exec_cmd(char **cmd, char **argv, int l, char *path);
 int _strlen(char *s);
 void my_exit(char **argv);
 void free_argv(char **argv);
