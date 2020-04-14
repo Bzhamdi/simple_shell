@@ -6,7 +6,7 @@ The simple shell is our own basic recreation of the Linux systems shell programs
 You can try our shell by following these steps:
 > **Step 1:** Clone the repository using this command.
 ````
-git clone https://github.com/MatriMariem/simple_shell
+git clone https://github.com/mahdibz97/simple_shell
 ````
 
 > **Step 3:** Compile the C files in this way:
