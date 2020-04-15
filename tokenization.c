@@ -17,7 +17,7 @@ char **tokenize(char *cmd, const char *delim)
 	if (array == NULL)
 	{
 		perror(_getenv("_"));
-		exit(2);
+		exit(0);
 	}
 	while (token)
 	{
