@@ -39,6 +39,9 @@ void exec_cmd(char **cmd, char **argv, int l, char *path)
 	}
 	else if (child_pid == 0)
 	{
+
+		execve(cmd[0], cmd, environ);
+
 		if (path == NULL)
 		{
 			_puts(argv[0]);
@@ -48,7 +51,6 @@ void exec_cmd(char **cmd, char **argv, int l, char *path)
 			_puts(cmd[0]);
 			_puts(" : command not found\n");
 		}
-		execve(cmd[0], cmd, environ);
 		exit(1);
 	}
 	else if (child_pid == 1)

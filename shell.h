@@ -58,5 +58,4 @@ int _strcmpr(char *cmp1, char *cmp2);
 char *_strtok(char *str, const char *delim);
 int _putchar(char c);
 void _help(char **argv);
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 #endif

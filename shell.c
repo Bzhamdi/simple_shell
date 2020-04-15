@@ -43,6 +43,8 @@ int main(int argc __attribute__((unused)), char **argv)
 	free(buffer);
 	free_argv(arg);
 	free(argv);
+	free(the_path);
+	free(value);
 	return (0);
 }
 
